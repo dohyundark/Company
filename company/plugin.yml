@@ -1,0 +1,53 @@
+name: Company
+main: com.company.company.Company
+version: 2.0
+author: Basix
+description: Simple Company Plugin and buggy!
+
+commands:
+   addcompany:
+      description: Add Company.
+      usage: /addcompany <Company Name> <Company Numbers>
+      permission: company.add
+      permission-message: Sorry, You can not create company!
+      
+   delcompany:
+      description: Delete Company.
+      usage: /delcompany <Company Name>
+      permission: company.add
+      permission-message: Sorry, You can not delete company!
+   listcompany:
+      description: List of Company.
+      usage: /listcompany
+      permission: company.list
+      permission-message: You can not see list!
+   reloadcompany:
+      description: Reload and save company.
+      usage: /reloadcompany
+      permission: company.add
+      permission-message: Sorry, you can not reload!
+   savecompany:
+      description: Save company.
+      usage: /savecompany
+      permission: company.add
+      permission-message: Sorry, you can not save data!
+   company:
+      description: for CEO or OP
+      usage: /savecompany
+      permission: company.ceo
+      permission-message: Sorry, you can not do this!
+permissions:
+    company.*:
+        description: Gives access to all doorman commands
+        children:
+            company.add: true
+            company.list: true
+    company.add:
+        description: Add/Delete Company.
+        default: op
+    company.ceo:
+        description: Settings Company.
+        default: op
+    company.list:
+        description: List of Company.
+        default: true
