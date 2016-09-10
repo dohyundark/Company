@@ -1,8 +1,8 @@
-name: Company
+name: MSFCompany
 main: com.company.company.Company
 version: 2.0
-author: Basix
-description: Simple Company Plugin and buggy!
+author: DohyunDark
+description: Simple Company Plugin
 
 commands:
    addcompany:
